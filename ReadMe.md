@@ -1,4 +1,5 @@
-#String Calculator
+# String Calculator
+
 To get started with the project, first of all run next command
 ```
 composer install
