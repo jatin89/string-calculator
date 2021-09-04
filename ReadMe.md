@@ -1,1 +1,3 @@
 String Calculator
+
+- composer install
