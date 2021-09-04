@@ -6,7 +6,7 @@ use PHPUnit\Util\Exception;
 
 class StringCalculator
 {
-    public function Add($number_string)
+    public function Add($number_string, $delimiter)
     {
         $total = 0;
         if (empty($number_string)){
