@@ -2,7 +2,6 @@
 
 namespace jatinpatel;
 
-use http\Exception\InvalidArgumentException;
 use PHPUnit\Util\Exception;
 
 class StringCalculator
@@ -23,7 +22,7 @@ class StringCalculator
             $numbers_without_delimiter = explode($delimiter,$numbers_with_delimiter);
             foreach ($numbers_without_delimiter as $number){
                 if($number < 0){
-                    throw new InvalidArgumentException("Negative not allowed");
+                    throw new Exception("Negative not allowed");
                 }else if($number <= 1000){
                     $total += $number;
                 }
@@ -36,7 +35,7 @@ class StringCalculator
                 }
                 // negative number not allowed in add
                 if ($match < 0) {
-                    throw new Exception("Negatives not allowed");
+                    throw new \InvalidArgumentException("Negatives not allowed");
                 }
                 //keep adding to total as there could be more than one number
                 $total += $match;

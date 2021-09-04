@@ -30,7 +30,8 @@ class StringCalculatorTest extends TestCase
         $this->assertEquals(8, $this->calculator->Add("//;\n1;3;4"));
         $this->assertEquals(6, $this->calculator->Add("//$\n1$2$3"));
         $this->assertEquals(13, $this->calculator->Add("//@\n2@3@8"));
-       // arbitary delimiter
+        $this->assertEquals(45, $this->calculator->Add("//jkp\n1jkp2jkp3jkp4jkp5jkp6jkp7jkp8jkp9"));
+        // arbitary delimiter
         $this->assertEquals(6, $this->calculator->Add("//***\n1***2***3"));
         // multiple delimiters
         $this->assertEquals(6, $this->calculator->Add("//$,@\n1$2@3"));
